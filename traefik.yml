@@ -33,9 +33,9 @@ http:
   routers:
     Router-1:
       # By default, routers listen to every entry points
-      rule: "Host(`thomas-chateau.net/cat1`)"
+      rule: "Host(`thomas-chateau.net`) && Path(`/cat1`)"
       service: "catapp1"
     Router-2:
       # By default, routers listen to every entry points
-      rule: "Host(`thomas-chateau.net/cat2`)"
+      rule: "Host(`thomas-chateau.net`) && Path(`/cat2`)"
       service: "catapp2"
