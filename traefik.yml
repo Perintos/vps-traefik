@@ -22,20 +22,20 @@ log:
 ################################################################
 # Entrypoint
 ################################################################
-# entryPoints:
-#   web:
-#     address: ":80"
-#   websecure:
-#     address: ":443"
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
 
 ## Dynamic configuration
-http:
-  routers:
-    Router-1:
+#http:
+#  routers:
+#    Router-1:
+#      # By default, routers listen to every entry points
+#      rule: "Host(`thomas-chateau.net`) && Path(`/cat1`)"
+#      service: "catapp1-catapp"
+#    Router-2:
       # By default, routers listen to every entry points
-      rule: "Host(`thomas-chateau.net`) && Path(`/cat1`)"
-      service: "catapp1-catapp"
-    Router-2:
-      # By default, routers listen to every entry points
-      rule: "Host(`thomas-chateau.net`) && Path(`/cat2`)"
-      service: "catapp2-catapp"
+      #      rule: "Host(`thomas-chateau.net`) && Path(`/cat2`)"
+      # service: "catapp2-catapp"
